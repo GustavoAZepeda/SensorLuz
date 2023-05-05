@@ -1,25 +1,22 @@
 /* Defining a class called `SensorLuz` with private member variables `pinSensorLuz`, `pinLED`,
-`valorUmbral`, `lecturaAnterior`, and `ledEncendido`. These variables are used to store information
+`valorUmbral` and `ledEncendido`. These variables are used to store information
 about a light sensor and an LED connected to an Arduino board. */
 class SensorLuz {
   private:
     int pinSensorLuz;
     int pinLED;
     int valorUmbral;
-    int lecturaAnterior;
     bool ledEncendido;
 
   /* This is a constructor for the `SensorLuz` class. It takes three parameters: `pinSensorLuz`,
   `pinLED`, and `valorUmbral`. The constructor initializes the private member variables of the class
-  with the values passed as parameters. It also sets the `lecturaAnterior` variable to 0 and the
-  `ledEncendido` variable to false. Finally, it sets the pinMode of `pinSensorLuz` to INPUT and
-  `pinLED` to OUTPUT. */
+  with the values passed as parameters. It also sets the `ledEncendido` variable to false. 
+   Finally, it sets the pinMode of `pinSensorLuz` to INPUT and `pinLED` to OUTPUT. */
   public:
     SensorLuz(int pinSensorLuz, int pinLED, int valorUmbral) {
       this->pinSensorLuz = pinSensorLuz;
       this->pinLED = pinLED;
       this->valorUmbral = valorUmbral;
-      this->lecturaAnterior = 0;
       this->ledEncendido = false;
 
       pinMode(pinSensorLuz, INPUT);
